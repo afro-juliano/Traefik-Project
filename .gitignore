@@ -20,3 +20,7 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+.terraform
+.terraform.lock.hcl
+plan
+swarm-01.pem
