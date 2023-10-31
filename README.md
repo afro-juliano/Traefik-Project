@@ -1,0 +1,2 @@
+# Traefik-Project
+This is a project in which I will provide 3 EC2 instances on AWS and I'll use Traefik as a reverse proxy for my application.
