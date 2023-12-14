@@ -13,9 +13,9 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.traefik_subnet.id
-  key_name      = "swarm-01.pem"
+  key_name      = aws_key_pair.kp.key_name
 
   tags = {
-    name = "swarm-01-${count.index}"
+    name = "swarm-${count.index}"
   }
 }

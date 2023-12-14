@@ -23,4 +23,4 @@ TestResults.xml
 .terraform
 .terraform.lock.hcl
 plan
-swarm-01.pem
+traefik_key.pem
