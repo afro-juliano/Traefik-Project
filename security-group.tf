@@ -1,4 +1,5 @@
 resource "aws_security_group" "traefik_sg" {
+  vpc_id      = aws_vpc.traefik_vpc.id
   name        = "traefik_sg_in"
   description = "Allow TLS inbound traffic"
 
@@ -9,7 +10,7 @@ resource "aws_security_group" "traefik_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags {
+  tags = {
     name = "traefik_sg_in"
   }
 }
