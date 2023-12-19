@@ -24,3 +24,5 @@ TestResults.xml
 .terraform.lock.hcl
 plan
 traefik_key.pem
+traefik_key
+traefik_key.pub
