@@ -34,3 +34,10 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
   ```
   # export AWS_SECRET_ACCESS_KEY="Your secret access Key"
   ```
+### Now you're ready to provision your infrastructure.
+
+  ```
+  # terraform init
+  # terraform plan
+  # terraform apply
+  ```
