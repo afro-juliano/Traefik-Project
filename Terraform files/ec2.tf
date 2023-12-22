@@ -13,8 +13,7 @@ resource "aws_instance" "instances" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.traefik_subnet.id
-  vpc_security_group_ids = [aws_security_group.traefik_sg.id]
-  vpc_security_group_ids = [aws_security_group.sg_dockerSwarm.id]
+  vpc_security_group_ids = [aws_security_group.traefik_sg.id, aws_security_group.sg_dockerSwarm.id]
   key_name               = aws_key_pair.kp.key_name
 
   user_data = <<-EOF
