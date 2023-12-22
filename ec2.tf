@@ -18,10 +18,11 @@ resource "aws_instance" "instances" {
 
   user_data = <<-EOF
     #!/bin/bash
-    sudo apt update -y
-    sudo apt install docker.io docker-compose
-    sudo apt-get install ca-certificates curl gnupg
-    sudo apt install kitty
+    exec > >(tee /var/log/user-data.log | logger -t user-data -s 2>/dev/console) 2>&1
+    sudo apt-get update && apt-get upgrade -y
+    sudo apt-get install -y docker.io docker-compose
+    sudo apt-get install -y ca-certificates curl gnupg
+    sudo apt-get install -y kitty
   EOF
 
   tags = {
