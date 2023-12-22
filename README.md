@@ -45,3 +45,25 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
   ```
   # terraform apply
   ```
+
+### Once your infrastructure is ready, you should enter your VMs via SSH, and configure the Swarm cluster:
+  * Go to the AWS console page, and click on the instance and her properties, get the SSH command to connect to the instance.
+  * Should be something like this:
+  ```
+  $ ssh -i "your_keypair.pem" ubuntu@ip-from-aws-ec2
+  ```
+  * This file with extension ".pem" will be generated over the script named key_pair.tf, 
+    and will be allocated on your local environment.
+
+  * Now you create your master and worker nodes, like this:
+  ```
+  # docker swarm init
+  ```
+  * the code above will generate a command for the worker nodes to join the cluster, an example below:
+  ```
+  # docker swarm join --token SWMTKN-1-4z09elaheege5w78atno4trstfy7ku8jqzejk4ju0lor6266vm-23ivfw9xilpoeskk5us1uhudr ip-from-machine:2377
+  ```
+  * Use the command generated to join the other two instances and your cluster will be completed.
+
+  * Now inside the master node we're going to create a docker-compose file for the traefik reverse proxy to listen to docker swarm events,
+    You can find the script for this action on this path Traefik-Project/Traefik\ And\ Cluster\ Swarm\ files
