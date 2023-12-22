@@ -38,6 +38,10 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
 
   ```
   # terraform init
+  ```
+  ```
   # terraform plan
+  ```
+  ```
   # terraform apply
   ```
