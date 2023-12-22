@@ -61,7 +61,7 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
   ```
   * the code above will generate a command for the worker nodes to join the cluster, an example below:
   ```
-  # docker swarm join --token SWMTKN-1-4z09elaheege5w78atno4trstfy7ku8jqzejk4ju0lor6266vm-23ivfw9xilpoeskk5us1uhudr ip-from-machine:2377
+  # docker swarm join --token yourgeneratedtokenhere ip-from-machine:2377
   ```
   * Use the command generated to join the other two instances and your cluster will be completed.
 
