@@ -23,9 +23,11 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
   ```
   $ cd Traefik-Project/Terraform\ files
   ```
+  * Run the hashicorp terraform container:
   ```
   # docker run -it -v $PWD:/app -w /app --entrypoint "" hashicorp/terraform:light sh
   ```
+  * Export access key and secret access key:
   ```
   # export AWS_ACCESS_KEY_ID="Your access Key ID"
   ```
