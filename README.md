@@ -66,4 +66,4 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
   * Use the command generated to join the other two instances and your cluster will be completed.
 
   * Now inside the master node we're going to create a docker-compose file for the traefik reverse proxy to listen to docker swarm events,
-    You can find the script for this action on this path Traefik-Project/Traefik\ And\ Cluster\ Swarm\ files
+    You can find the script for this action on this path Traefik-Project/Traefik\ And\ Cluster\ Swarm\ files.
