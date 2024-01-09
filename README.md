@@ -67,3 +67,32 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
 
   * Now inside the master node we're going to create a docker-compose file for the traefik reverse proxy to listen to docker swarm events,
     You can find the script for this action on this path Traefik-Project/Traefik\ And\ Cluster\ Swarm\ files.
+
+  * Create a docker network 
+  ```
+  # docker network create --driver=overlay traefik-public
+  ```
+  * Create the files
+  ```
+  # touch traefik_deploy.yaml
+  ```
+  ```
+  # vim traefik_deploy.yaml
+  ```
+  ```
+  # vim app_example.yaml
+  ```
+  * Once those files are in place we need to deploy the services in our cluster
+
+  ###### Like This:
+  ```
+  # docker stack deploy traefik -c traefik_deploy.yaml
+  ```
+  ```
+  # docker stack deploy loja -c app_example.yaml
+  ```
+  * To check the services status: 
+
+  ```
+  # docker service ls
+  ```
