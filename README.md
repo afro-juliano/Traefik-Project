@@ -47,7 +47,7 @@ This is a project in which I will provide 3 EC2 instances on AWS. And I'll use T
   ```
 
 ### Once your infrastructure is ready, you should enter your VMs via SSH, and configure the Swarm cluster:
-  * Go to the AWS console page, and click on the instance and her properties, get the SSH command to connect to the instance.
+  * Go to the AWS console page, and click on the instance and it's properties, get the SSH command to connect to the instance.
   * Should be something like this:
   ```
   $ ssh -i "your_keypair.pem" ubuntu@ip-from-aws-ec2
