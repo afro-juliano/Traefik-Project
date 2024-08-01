@@ -7,10 +7,9 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.lojal.rule=Host('loja.biqueiranerd.com.br')"
+        - "traefik.http.routers.loja.rule=Host('loja.afrostructure.com.br')"
         - "traefik.http.routers.loja.entrypoints=web"
         - "traefik.http.services.loja.loadbalancer.server.port=80"
 networks:
   traefik-public:
     external: true
-
